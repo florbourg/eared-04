@@ -12,6 +12,30 @@ const theme = createTheme({
   typography: {
     fontFamily: montserrat.style.fontFamily,
     color: "#212121",
+    h1: {
+      fontSize: '36px',
+      lineHeight: '46px',
+    },
+    h2: {
+      fontSize: '30px',
+      lineHeight: '34px',
+    },
+    h3: {
+      fontSize: '24px',
+      lineHeight: '34px',
+    },
+    h4: {
+      fontSize: '22px',
+      lineHeight: '28px',
+    },
+    h5: {
+      fontSize: '18px',
+      lineHeight: '24px',
+    },
+    h6: {
+      fontSize: '16px',
+      lineHeight: '22px',
+    },
   },
   palette: {
     primary: {

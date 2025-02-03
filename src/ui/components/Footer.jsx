@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 export const Footer = () => {
   return (
     <AppBar
-      position="fixed"
+      position="relative"
       sx={{
         top: "auto",
         bottom: 0,
