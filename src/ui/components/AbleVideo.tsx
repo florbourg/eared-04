@@ -66,7 +66,13 @@ const AbleVideo: React.FC = () => {
           kind="captions"
           src="/eared-04/subs_Es.vtt"
           srcLang="es"
-          label="Español"
+          label="Subtítulos Español"
+        />
+        <track
+          kind="descriptions"
+          src="/eared-04/audiodescripcion.vtt"
+          srcLang="es"
+          label="Audiodescripción"
         />
       </video>
     </Box>
