@@ -33,9 +33,20 @@ const theme = createTheme({
       lineHeight: '24px',
     },
     h6: {
-      fontSize: '16px',
-      lineHeight: '22px',
+      fontSize: '18px',
+      lineHeight: '24px',
+      fontWeight: 600,
     },
+    body1: {
+      fontSize: '16px',
+      lineHeight: 1.75,
+    },
+    body2: {
+      fontSize: '16px',
+      lineHeight: 1.75,
+      fontWeight: 600,
+    }
+
   },
   palette: {
     primary: {
