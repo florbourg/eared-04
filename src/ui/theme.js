@@ -11,18 +11,22 @@ const montserrat = Montserrat({
 const theme = createTheme({
   typography: {
     fontFamily: montserrat.style.fontFamily,
-    color: "#212121",
+    color: "#262627",
     h1: {
-      fontSize: '36px',
-      lineHeight: '46px',
+      fontSize: '14px',
+      lineHeight: '16px',
+      marginBottom: '20px',
+      color: '#DF3675',
     },
     h2: {
       fontSize: '30px',
       lineHeight: '34px',
+      fontWeight: 600,
     },
     h3: {
-      fontSize: '24px',
-      lineHeight: '34px',
+      fontSize: '18px',
+      lineHeight: '24px',
+      fontWeight: 600,
     },
     h4: {
       fontSize: '22px',
@@ -33,9 +37,8 @@ const theme = createTheme({
       lineHeight: '24px',
     },
     h6: {
-      fontSize: '18px',
+      fontSize: '16px',
       lineHeight: '24px',
-      fontWeight: 600,
     },
     body1: {
       fontSize: '16px',
@@ -58,7 +61,7 @@ const theme = createTheme({
       contrastText: "#ffffff", 
     },
     text: {
-      primary: "#212121", 
+      primary: "#262627", 
       secondary: "#757575", 
     },
   },

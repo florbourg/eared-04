@@ -6,8 +6,10 @@ import {
   AccordionDetails,
   Box,
   Paper,
+  Button,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import DownloadIcon from "@mui/icons-material/Download";
 import AbleVideo from "../ui/components/AbleVideo";
 import Image from "next/image";
 
@@ -20,16 +22,24 @@ export default function Home() {
         spacing={2}
       >
         <Box flex={1} p={2} minWidth={"80%"}>
-          <Typography variant="h1" component="h1" gutterBottom>
+          <Typography variant="h1" component="h1">
             Módulo 3 - Composición y encuadre
           </Typography>
-          <Typography variant="h3" component="h3" gutterBottom>
-            El Círculo Cromático – Aprende sobre los colores
+          <Typography variant="h2" component="h2" gutterBottom>
+            El Círculo Cromático
           </Typography>
           <AbleVideo />
-
+          <Button
+            variant="contained"
+            color="primary"
+            startIcon={<DownloadIcon />}
+            href="/eared-04/Material_apoyo_circulo_cromatico.pdf"
+            download
+          >
+            Descargar material de Apoyo en PDF
+          </Button>
           <Paper sx={{ padding: 3, marginY: 4 }}>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h3" component="h3" gutterBottom>
               El Círculo Cromático en Fotografía
             </Typography>
 
@@ -44,7 +54,7 @@ export default function Home() {
           </Paper>
 
           <Paper sx={{ padding: 3, marginY: 4 }}>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h3" component="h3" gutterBottom>
               ¿Para qué sirve el círculo cromático?
             </Typography>
 
@@ -58,7 +68,7 @@ export default function Home() {
 
           <Accordion defaultExpanded>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="body2">
+              <Typography variant="body2" component="h3">
                 Colores primarios y secundarios
               </Typography>
             </AccordionSummary>
@@ -98,7 +108,7 @@ export default function Home() {
           </Accordion>
           <Accordion>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="body2">
+              <Typography variant="body2" component="h3">
                 Colores complementarios y análogos
               </Typography>
             </AccordionSummary>
@@ -146,7 +156,9 @@ export default function Home() {
           </Accordion>
           <Accordion>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="body2">Tríadas y monocromos</Typography>
+              <Typography variant="body2" component="h3">
+                Tríadas y monocromos
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="body1">
@@ -195,7 +207,7 @@ export default function Home() {
           </Accordion>
 
           <Paper sx={{ padding: 3, marginY: 4 }}>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h3" component="h3" gutterBottom>
               Resumen con información adicional
             </Typography>
 
@@ -210,6 +222,7 @@ export default function Home() {
             </Typography>
           </Paper>
         </Box>
+
         <Box flex={1} p={2}>
           <aside>
             {Array.from({ length: 5 }, (_, moduleIndex) => (
