@@ -8,63 +8,51 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
-const theme = createTheme({
+const baseTheme = createTheme({
   typography: {
     fontFamily: montserrat.style.fontFamily,
     color: "#262627",
     h1: {
-      fontSize: '14px',
-      lineHeight: '16px',
-      marginBottom: '20px',
-      color: '#DF3675',
+      fontSize: "14px",
+      lineHeight: "16px",
+      marginBottom: "20px",
     },
     h2: {
-      fontSize: '30px',
-      lineHeight: '34px',
+      fontSize: "30px",
+      lineHeight: "34px",
       fontWeight: 600,
     },
     h3: {
-      fontSize: '18px',
-      lineHeight: '24px',
+      fontSize: "18px",
+      lineHeight: "24px",
       fontWeight: 600,
     },
     h4: {
-      fontSize: '22px',
-      lineHeight: '28px',
+      fontSize: "22px",
+      lineHeight: "28px",
     },
     h5: {
-      fontSize: '18px',
-      lineHeight: '24px',
+      fontSize: "18px",
+      lineHeight: "24px",
     },
     h6: {
-      fontSize: '16px',
-      lineHeight: '24px',
+      fontSize: "16px",
+      lineHeight: "24px",
     },
     body1: {
-      fontSize: '16px',
+      fontSize: "16px",
       lineHeight: 1.75,
     },
     body2: {
-      fontSize: '16px',
+      fontSize: "16px",
       lineHeight: 1.75,
       fontWeight: 600,
-    }
+    },
+  },
+});
 
-  },
-  palette: {
-    primary: {
-      main: "#DF3675", 
-      contrastText: "#ffffff", 
-    },
-    secondary: {
-      main: "#3CAF97", 
-      contrastText: "#ffffff", 
-    },
-    text: {
-      primary: "#262627", 
-      secondary: "#757575", 
-    },
-  },
+export const normalTheme = createTheme({
+  ...baseTheme,
   components: {
     MuiButton: {
       styleOverrides: {
@@ -90,7 +78,7 @@ const theme = createTheme({
           },
         },
         text: {
-          color: "#DF3675",
+          color: "#262627",
           "&:hover": {
             backgroundColor: "#FCE4EC",
           },
@@ -100,20 +88,76 @@ const theme = createTheme({
         {
           props: { variant: "dark" },
           style: {
-            backgroundColor: "#333333", 
-            color: "#ffffff", 
+            backgroundColor: "#333333",
+            color: "#ffffff",
             "&:hover": {
-              backgroundColor: "#727272", 
+              backgroundColor: "#727272",
             },
             "&.Mui-disabled": {
-              backgroundColor: "#E1E1E1", 
-              color: "#7D7D7D", 
+              backgroundColor: "#E1E1E1",
+              color: "#7D7D7D",
             },
           },
         },
       ],
     },
   },
+  palette: {
+    mode: "light",
+    background: { default: "#ffffff", paper: "#ffffff" },
+    primary: {
+      main: "#DF3675",
+    },
+    secondary: {
+      main: "#3CAF97",
+    },
+    text: {
+      primary: "#262627",
+      secondary: "#757575",
+    },
+  },
 });
 
-export default theme;
+export const highContrastTheme = createTheme({
+  ...normalTheme,
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          boxShadow: "none",
+          textTransform: "none",
+        },
+        containedPrimary: {
+          "&:hover": {
+            backgroundColor: "#3CAF97",
+          },
+        },
+        containedSecondary: {
+          "&:hover": {
+            backgroundColor: "#DF3675",
+          },
+        },
+        containedInfo: {
+          backgroundColor: "#F5F5F5",
+          color: "#4D4D4D",
+          "&:hover": {
+            backgroundColor: "#D3D3D3",
+          },
+        },
+        text: {
+          color: "#FFF",
+          "&:hover": {
+            color: "#262627",
+            backgroundColor: "#FCE4EC",
+          },
+        },
+      },
+    },
+  },
+  palette: {
+    mode: "dark",
+    primary: { main: "#F4BCD1" },
+    background: { default: "#262627", paper: "#262627" },
+    text: { primary: "#FFF", secondary: "#BBE8DE" },
+  },
+});

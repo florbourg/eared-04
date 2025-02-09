@@ -32,7 +32,7 @@ export default function Home() {
           <Button
             variant="contained"
             color="primary"
-            startIcon={<DownloadIcon />}
+            startIcon={<DownloadIcon aria-hidden="true" />}
             aria-label="Descargar material de apoyo en formato PDF"
             href="/eared-04/Material_apoyo_circulo_cromatico.pdf"
             download
@@ -269,7 +269,7 @@ export default function Home() {
                       color={
                         moduleIndex === 2 && classIndex === 1
                           ? "primary"
-                          : "initial"
+                          : "dark"
                       }
                     >
                       Clase {classIndex + 1}
