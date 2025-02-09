@@ -22,10 +22,10 @@ export default function Home() {
         spacing={2}
       >
         <Box flex={1} p={2} minWidth={"80%"}>
-          <Typography variant="h1" component="h1">
+          <Typography variant="h1" component="h1" tabIndex={-1}>
             Módulo 3 - Composición y encuadre
           </Typography>
-          <Typography variant="h2" component="h2" gutterBottom>
+          <Typography variant="h2" component="h2" gutterBottom tabIndex={-1}>
             El Círculo Cromático
           </Typography>
           <AbleVideo />
@@ -33,13 +33,14 @@ export default function Home() {
             variant="contained"
             color="primary"
             startIcon={<DownloadIcon />}
+            aria-label="Descargar material de apoyo en formato PDF"
             href="/eared-04/Material_apoyo_circulo_cromatico.pdf"
             download
           >
             Descargar material de Apoyo en PDF
           </Button>
           <Paper sx={{ padding: 3, marginY: 4 }}>
-            <Typography variant="h3" component="h3" gutterBottom>
+            <Typography variant="h3" component="h3" gutterBottom tabIndex={-1}>
               El Círculo Cromático en Fotografía
             </Typography>
 
@@ -54,7 +55,7 @@ export default function Home() {
           </Paper>
 
           <Paper sx={{ padding: 3, marginY: 4 }}>
-            <Typography variant="h3" component="h3" gutterBottom>
+            <Typography variant="h3" component="h3" gutterBottom tabIndex={-1}>
               ¿Para qué sirve el círculo cromático?
             </Typography>
 
@@ -67,8 +68,12 @@ export default function Home() {
           </Paper>
 
           <Accordion defaultExpanded>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="body2" component="h3">
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon aria-hidden="true" />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <Typography variant="body2" component="h3" tabIndex={-1}>
                 Colores primarios y secundarios
               </Typography>
             </AccordionSummary>
@@ -83,6 +88,8 @@ export default function Home() {
               <Typography variant="body2">Colores primarios</Typography>
               <div
                 style={{ width: "100%", height: "400px", position: "relative" }}
+                role="img"
+                aria-label="Ejemplo visual de colores primarios"
               >
                 <Image
                   title="Ejemplo visual de colores primarios en el círculo cromático"
@@ -95,6 +102,8 @@ export default function Home() {
               <Typography variant="body2">Colores secundarios</Typography>
               <div
                 style={{ width: "100%", height: "400px", position: "relative" }}
+                role="img"
+                aria-label="Ejemplo visual de colores secundarios"
               >
                 <Image
                   title="Ejemplo visual de colores secundarios en el círculo cromático"
@@ -107,8 +116,12 @@ export default function Home() {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="body2" component="h3">
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon aria-hidden="true" />}
+              aria-controls="panel2-content"
+              id="panel2-header"
+            >
+              <Typography variant="body2" component="h3" tabIndex={-1}>
                 Colores complementarios y análogos
               </Typography>
             </AccordionSummary>
@@ -125,6 +138,8 @@ export default function Home() {
               </Typography>
               <div
                 style={{ width: "100%", height: "400px", position: "relative" }}
+                role="img"
+                aria-label="Ejemplo visual de colores complementarios"
               >
                 <Image
                   title="Ejemplo visual de colores complementarios en el círculo cromático"
@@ -143,6 +158,8 @@ export default function Home() {
               </Typography>
               <div
                 style={{ width: "100%", height: "400px", position: "relative" }}
+                role="img"
+                aria-label="Ejemplo visual de colores análogos"
               >
                 <Image
                   title="Ejemplo visual de colores análogos en el círculo cromático"
@@ -155,8 +172,12 @@ export default function Home() {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="body2" component="h3">
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon aria-hidden="true" />}
+              aria-controls="panel3-content"
+              id="panel3-header"
+            >
+              <Typography variant="body2" component="h3" tabIndex={-1}>
                 Tríadas y monocromos
               </Typography>
             </AccordionSummary>
@@ -175,6 +196,8 @@ export default function Home() {
               </Typography>
               <div
                 style={{ width: "100%", height: "400px", position: "relative" }}
+                role="img"
+                aria-label="Ejemplo visual de tríada de colores"
               >
                 <Image
                   title="Ejemplo visual de una triada de colores en el círculo cromático"
@@ -194,6 +217,8 @@ export default function Home() {
               </Typography>
               <div
                 style={{ width: "100%", height: "400px", position: "relative" }}
+                role="img"
+                aria-label="Ejemplo visual de monocromo"
               >
                 <Image
                   title="Ejemplo visual de un monocromo en el círculo cromático"
@@ -207,7 +232,7 @@ export default function Home() {
           </Accordion>
 
           <Paper sx={{ padding: 3, marginY: 4 }}>
-            <Typography variant="h3" component="h3" gutterBottom>
+            <Typography variant="h3" component="h3" gutterBottom tabIndex={-1}>
               Resumen con información adicional
             </Typography>
 
@@ -227,7 +252,11 @@ export default function Home() {
           <aside>
             {Array.from({ length: 5 }, (_, moduleIndex) => (
               <Accordion key={moduleIndex} defaultExpanded={moduleIndex === 2}>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon aria-hidden="true" />}
+                  aria-controls={`menu${moduleIndex}-content`}
+                  id={`menu${moduleIndex}-header`}
+                >
                   <Typography>Módulo {moduleIndex + 1}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
