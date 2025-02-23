@@ -60,7 +60,7 @@ const AbleVideo: React.FC = () => {
       <video ref={videoRef} id="video1" playsInline>
         <source
           type="video/mp4"
-          src="/eared-04/CirculoCromatico_WA.mp4"
+          src="/eared-04/CirculoCromatico.mp4"
         />
         <track
           kind="captions"

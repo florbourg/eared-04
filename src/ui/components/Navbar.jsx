@@ -136,35 +136,24 @@ export const Navbar = () => {
               ))}
             </Menu>
           </Box>
-          <Box textAlign="center" p={4}>
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={isHighContrast}
-                  onChange={toggleHighContrast}
-                  color="primary"
-                />
-              }
+          <Box textAlign="center" p={2}>
+            <Tooltip
               title={
-                isHighContrast
-                  ? "Activar modo normal"
-                  : "Activar modo alto contraste"
+                isHighContrast ? "Cambiar a modo claro" : "Cambiar a modo oscuro"
               }
-              label={
-                isHighContrast ? (
-                  <IconButton
-                    color="default"
-                    aria-label="Activar modo alto contraste"
-                  >
-                    <NightsStay aria-hidden="true" />
-                  </IconButton>
-                ) : (
-                  <IconButton color="default" aria-label="Activar modo normal">
-                    <WbSunny aria-hidden="true" />
-                  </IconButton>
-                )
-              }
-            />
+            >
+              <IconButton
+                onClick={toggleHighContrast}
+                color="default"
+                aria-label={
+                  isHighContrast ? "Modo oscuro activado" : "Modo claro activado"
+                }
+                aria-live="polite"
+              >
+                {isHighContrast ? <NightsStay /> : <WbSunny />}
+              </IconButton>
+            </Tooltip>
+            
           </Box>
         </Toolbar>
       </Container>

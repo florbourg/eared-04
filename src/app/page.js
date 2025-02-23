@@ -47,10 +47,10 @@ export default function Home() {
             <Typography variant="body1" gutterBottom>
               El círculo cromático es una representación visual y ordenada de
               los colores primarios, secundarios y terciarios distribuidos de
-              forma circular. Suele graficarse a través de un círculo dividido
-              en porciones de colores que se van mezclando como en degrade. Hay
-              personas que también lo llaman rueda cromática o rueda de colores,
-              aunque también puede encontrarse en forma de escala rectangular.
+              forma circular. Suele graficarse a través de un círculo que tiene
+              grupos de colores uno seguido del otro. Hay personas que también
+              lo llaman rueda cromática o rueda de colores, aunque también puede
+              encontrarse en forma de escala rectangular.
             </Typography>
           </Paper>
 
@@ -61,9 +61,9 @@ export default function Home() {
 
             <Typography variant="body1" gutterBottom>
               Esta forma de ver los colores sirve para visualizar mejor sus
-              tonos y matices. Nos permite entender cómo se vinculan los colores
-              cuando tenemos como objetivo, por ejemplo, mostrar relaciones de
-              armonía o contraste.
+              tonos y cuando hay pequeñas diferencias. Nos permite entender cómo
+              se vinculan los colores cuando tenemos como objetivo, por ejemplo,
+              mostrar relaciones de armonía o contraste.
             </Typography>
           </Paper>
 
@@ -92,9 +92,9 @@ export default function Home() {
                 aria-label="Ejemplo visual de colores primarios"
               >
                 <Image
-                  title="Ejemplo visual de colores primarios en el círculo cromático"
+                  title="Indicación visual de cuales son los colores primarios dentro del círculo cromático."
                   src="/eared-04/primarios.png"
-                  alt="Ejemplo visual de colores primarios en el círculo cromático"
+                  alt="En la imagen se indican el rojo, el azul y el amarillo como colores primarios dentro del círculo cromático."
                   layout="fill"
                   objectFit="contain"
                 />
@@ -106,9 +106,9 @@ export default function Home() {
                 aria-label="Ejemplo visual de colores secundarios"
               >
                 <Image
-                  title="Ejemplo visual de colores secundarios en el círculo cromático"
+                  title="Indicación visual de cuales son los colores secundarios dentro del círculo cromático."
                   src="/eared-04/secundarios.png"
-                  alt="Ejemplo visual de colores secundarios en el círculo cromático"
+                  alt="En la imagen se indican el violeta, el naranja y el verde como colores secundarios dentro del círculo cromático."
                   layout="fill"
                   objectFit="contain"
                 />
@@ -142,9 +142,9 @@ export default function Home() {
                 aria-label="Ejemplo visual de colores complementarios"
               >
                 <Image
-                  title="Ejemplo visual de colores complementarios en el círculo cromático"
+                  title="Indicación visual de un ejemplo de colores complementarios dentro del círculo cromático."
                   src="/eared-04/complementarios.png"
-                  alt="Ejemplo visual de colores complementarios en el círculo cromático"
+                  alt="En la imagen se indican el violeta y el amarillo como ejemplo de colores complementarios dentro del círculo cromático."
                   layout="fill"
                   objectFit="contain"
                 />
@@ -162,9 +162,9 @@ export default function Home() {
                 aria-label="Ejemplo visual de colores análogos"
               >
                 <Image
-                  title="Ejemplo visual de colores análogos en el círculo cromático"
+                  title="Indicación visual de un ejemplo de colores análogos dentro del círculo cromático."
                   src="/eared-04/analogos.png"
-                  alt="Ejemplo visual de colores análogos en el círculo cromático"
+                  alt="En la imagen se indican dos tonos de azul y el violeta como ejemplo de colores análogos dentro del círculo cromático."
                   layout="fill"
                   objectFit="contain"
                 />
@@ -200,9 +200,9 @@ export default function Home() {
                 aria-label="Ejemplo visual de tríada de colores"
               >
                 <Image
-                  title="Ejemplo visual de una triada de colores en el círculo cromático"
+                  title="Indicación visual de un ejemplo de tríada de colores dentro del círculo cromático."
                   src="/eared-04/triada.png"
-                  alt="Ejemplo visual de una triada de colores en el círculo cromático"
+                  alt="En la imagen se indican el fucsia, el ocre y el turquesa como ejemplo de tríada de colores dentro del círculo cromático."
                   layout="fill"
                   objectFit="contain"
                 />
@@ -221,9 +221,9 @@ export default function Home() {
                 aria-label="Ejemplo visual de monocromo"
               >
                 <Image
-                  title="Ejemplo visual de un monocromo en el círculo cromático"
+                  title="Indicación visual de un ejemplo de monocromo dentro del círculo cromático."
                   src="/eared-04/monocromo.png"
-                  alt="Ejemplo visual de un monocromo en el círculo cromático"
+                  alt="En la imagen se indican diferentes tonos de amarillo como ejemplo de monocromo dentro del círculo cromático."
                   layout="fill"
                   objectFit="contain"
                 />
